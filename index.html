@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Keterangan Aktif</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- HALAMAN PEMBUKA -->
+
+<div id="landing-page">
+
+<div class="landing-content">
+
+    <img src="logo.png" alt="Logo Sekolah" class="landing-logo">
+
+    <h1>SDIT Daarul Hasanah</h1>
+
+    <h2>Surat Keterangan Aktif</h2>
+
+    <p>
+        Pembuatan Surat Keterangan Aktif Siswa yang cepat, praktis, dan siap cetak dalam format A4.
+    </p>
+
+    <button class="btn-masuk" onclick="masukAplikasi()">
+        Masuk ke Aplikasi
+    </button>
+
+
+</div>
+
+</div>
+
+<div class="form-container">
+    <h2>Input Data Siswa</h2>
+
+    <label>Nomor Surat</label>
+    <input type="text" id="nomor" placeholder="125/D/SDIT-DH/VII/2026">
+
+    <label>Nama Siswa</label>
+    <input type="text" id="nama">
+
+    <label>NISN</label>
+    <input type="text" id="nisn">
+
+    <label>Tempat, Tanggal Lahir</label>
+    <input type="text" id="ttl">
+
+    <label>Kelas</label>
+    <input type="text" id="kelas">
+
+    <label>Tahun Pelajaran</label>
+    <input type="text" id="tapel" placeholder="2025/2026">
+
+    <button onclick="buatSurat()">Buat Surat</button>
+</div>
+
+<div id="surat">
+
+    <div class="kop">
+        <img src="kop-sdit.png" alt="Kop Surat" class="kop-banner">
+    </div>
+
+    <div class="judul">
+        SURAT KETERANGAN AKTIF
+    </div>
+
+    <div class="nomor">
+        Nomor : <span id="s_nomor"></span>
+    </div>
+
+    <p>
+        Yang bertanda tangan di bawah ini:
+    </p>
+
+    <table>
+        <tr>
+            <td width="170">Nama</td>
+            <td width="20">:</td>
+            <td><b>Wakidi Ahmad Junaidi,S.Pd.I</b></td>
+        </tr>
+        <tr>
+            <td>NIP</td>
+            <td>:</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>Jabatan</td>
+            <td>:</td>
+            <td>Kepala SDIT Daarul Hasanah</td>
+        </tr>
+    </table>
+
+    <p class="isi-surat">
+        Dengan ini menerangkan bahwa:
+    </p>
+
+    <table>
+        <tr>
+            <td width="170">Nama</td>
+            <td width="20">:</td>
+            <td id="s_nama"></td>
+        </tr>
+        <tr>
+            <td>NISN</td>
+            <td>:</td>
+            <td id="s_nisn"></td>
+        </tr>
+        <tr>
+            <td>Tempat/Tanggal Lahir</td>
+            <td>:</td>
+            <td id="s_ttl"></td>
+        </tr>
+        <tr>
+            <td>Kelas</td>
+            <td>:</td>
+            <td id="s_kelas"></td>
+        </tr>
+    </table>
+
+    <p class="isi-surat">
+        Adalah benar nama tersebut di atas merupakan peserta didik yang masih aktif belajar di SDIT Daarul Hasanah pada Tahun Pelajaran <span id="s_tapel"></span>.
+    </p>
+
+    <p class="isi-surat">
+        Demikian surat keterangan ini dibuat untuk dipergunakan sebagaimana mestinya.
+    </p>
+
+    <div class="ttd">
+        Jakarta, <span id="tanggal"></span>
+        <br><br><br><br><br>
+
+        <b><u>Wakidi Ahmad Junaidi,S.Pd.I</u></b><br>
+        NIP. ....................................
+    </div>
+
+</div>
+
+<div class="aksi">
+    <button onclick="window.print()">
+        Cetak Surat
+    </button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

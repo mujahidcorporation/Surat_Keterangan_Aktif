@@ -1,0 +1,255 @@
+body{
+font-family:"Times New Roman",serif;
+margin:0;
+padding:30px;
+background:linear-gradient(135deg,#edf7ed,#fdfbf3);
+}
+
+/* FORM */
+
+.form-container{
+max-width:700px;
+margin:auto;
+background:#fff;
+padding:30px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+border-top:6px solid #1f6f43;
+margin-bottom:30px;
+}
+
+.form-container h2{
+text-align:center;
+color:#1f6f43;
+margin-bottom:25px;
+font-size:28px;
+}
+
+label{
+display:block;
+margin-bottom:6px;
+font-weight:bold;
+color:#444;
+}
+
+input{
+width:100%;
+padding:12px 15px;
+border:1px solid #d6d6d6;
+border-radius:8px;
+margin-bottom:15px;
+box-sizing:border-box;
+transition:.3s;
+font-size:15px;
+}
+
+input:focus{
+outline:none;
+border-color:#1f6f43;
+box-shadow:0 0 0 4px rgba(31,111,67,.15);
+}
+
+button{
+background:#1f6f43;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+font-size:15px;
+transition:.3s;
+}
+
+button:hover{
+transform:translateY(-2px);
+background:#14532d;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+/* SURAT */
+
+#surat{
+width:210mm;
+min-height:297mm;
+margin:auto;
+background:white;
+padding:25mm;
+display:none;
+box-sizing:border-box;
+box-shadow:0 0 35px rgba(0,0,0,.15);
+border-radius:8px;
+}
+
+.kop{
+text-align:center;
+margin-bottom:15px;
+}
+
+.kop-banner{
+width:100%;
+display:block;
+}
+
+.judul{
+text-align:center;
+font-size:20px;
+font-weight:bold;
+text-decoration:underline;
+letter-spacing:1px;
+margin-top:10px;
+}
+
+.nomor{
+text-align:center;
+margin-top:8px;
+margin-bottom:30px;
+}
+
+table{
+border-collapse:collapse;
+}
+
+table td{
+padding:4px 0;
+vertical-align:top;
+}
+
+.isi-surat{
+text-align:justify;
+line-height:1.8;
+margin-top:15px;
+}
+
+.ttd{
+width:260px;
+margin-left:auto;
+margin-top:60px;
+text-align:center;
+line-height:1.6;
+}
+
+.aksi{
+text-align:center;
+margin-top:25px;
+}
+
+/* PRINT */
+
+@page{
+size:A4;
+margin:15mm;
+}
+
+@media print{
+
+.form-container,
+.aksi{
+    display:none;
+}
+
+body{
+    background:white;
+    padding:0;
+    margin:0;
+}
+
+#surat{
+    display:block !important;
+    width:100%;
+    min-height:auto;
+    box-shadow:none;
+    border-radius:0;
+    padding:20mm;
+}
+
+}
+/* =========================
+LANDING PAGE
+========================= */
+
+#landing-page{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+
+background:
+linear-gradient(
+135deg,
+#1f6f43,
+#2d8f58,
+#f3f0df
+);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+z-index:9999;
+
+}
+
+.landing-content{
+text-align:center;
+background:rgba(255,255,255,.95);
+padding:50px;
+border-radius:25px;
+max-width:650px;
+width:90%;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.2);
+
+}
+
+.landing-logo{
+width:130px;
+height:130px;
+object-fit:contain;
+margin-bottom:20px;
+}
+
+.landing-content h1{
+margin:0;
+color:#1f6f43;
+font-size:38px;
+}
+
+.landing-content h2{
+margin-top:10px;
+color:#444;
+font-weight:500;
+}
+
+.landing-content p{
+margin:25px 0;
+line-height:1.8;
+color:#555;
+}
+
+.btn-masuk{
+background:#1f6f43;
+color:white;
+border:none;
+padding:15px 35px;
+border-radius:50px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn-masuk:hover{
+transform:translateY(-3px);
+background:#14532d;
+}
+
+/* SEMBUNYIKAN APLIKASI SAAT AWAL */
+
+.form-container,
+.aksi,
+#surat{
+display:none;
+}
