@@ -141,36 +141,42 @@ size:A4;
 margin:15mm;
 }
 
-@media print{
+@media print {
 
-.form-container,
-.aksi{
-    display:none;
-}
-@media print{
+    body *{
+        visibility:hidden;
+    }
+
+    #surat,
+    #surat *{
+        visibility:visible;
+    }
+
+    #surat{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        margin:0;
+        padding:20mm;
+        box-shadow:none;
+        border:none;
+        display:block !important;
+    }
+
     .form-container,
-    .aksi{
+    .aksi,
+    #landing-page{
         display:none !important;
+    }
+
+    body{
+        background:white;
+        margin:0;
+        padding:0;
     }
 }
 
-
-body{
-    background:white;
-    padding:0;
-    margin:0;
-}
-
-#surat{
-    display:block !important;
-    width:100%;
-    min-height:auto;
-    box-shadow:none;
-    border-radius:0;
-    padding:20mm;
-}
-
-}
 /* =========================
 LANDING PAGE
 ========================= */
