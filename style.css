@@ -137,8 +137,8 @@ margin-top:25px;
 /* PRINT */
 
 @page{
-size:A4;
-margin:15mm;
+    size:A4;
+    margin:0;
 }
 
 @media print {
@@ -157,23 +157,29 @@ margin:15mm;
         top:0;
         left:0;
         width:100%;
+        padding:5mm 10mm;
         margin:0;
-        padding:20mm;
         box-shadow:none;
         border:none;
+        border-radius:0;
         display:block !important;
+    }
+
+    .kop{
+        margin-top:0;
+        padding-top:0;
+    }
+
+    .kop-banner{
+        display:block;
+        width:100%;
+        margin:0;
     }
 
     .form-container,
     .aksi,
     #landing-page{
         display:none !important;
-    }
-
-    body{
-        background:white;
-        margin:0;
-        padding:0;
     }
 }
 
