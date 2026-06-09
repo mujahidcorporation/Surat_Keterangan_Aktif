@@ -147,6 +147,13 @@ margin:15mm;
 .aksi{
     display:none;
 }
+@media print{
+    .form-container,
+    .aksi{
+        display:none !important;
+    }
+}
+
 
 body{
     background:white;
