@@ -54,7 +54,11 @@
     <label>Tahun Pelajaran</label>
     <input type="text" id="tapel" placeholder="2025/2026">
 
+    <div class="form-container">
+    ...
     <button onclick="buatSurat()">Buat Surat</button>
+    <div class="aksi"> <button onclick="window.print()"> Cetak Surat</button> </div>
+    </div>
 </div>
 
 <div id="surat">
@@ -136,12 +140,6 @@
         NIP. ....................................
     </div>
 
-</div>
-
-<div class="aksi">
-    <button onclick="window.print()">
-        Cetak Surat
-    </button>
 </div>
 
 <script src="script.js"></script>
